@@ -1,0 +1,10 @@
+.dashboard-page-title {
+  color: #020202;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1199px) {
+  .dashboard-page-title {
+    margin-left: 50px;
+  }
+}

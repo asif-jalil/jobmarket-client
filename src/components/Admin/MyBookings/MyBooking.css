@@ -1,0 +1,46 @@
+.single-booking .card-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.my-booking-info {
+  margin-right: 10px;
+}
+
+.my-booking-img {
+  width: 100px;
+  height: 100px;
+}
+
+.my-booking-img .spinner-border {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+}
+
+.my-booking-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+  .single-booking {
+    text-align: center;
+  }
+
+  .my-booking-info {
+    margin-bottom: 30px;
+  }
+
+  .my-booking-info,
+  .my-booking-img {
+    width: 100%;
+  }
+
+}

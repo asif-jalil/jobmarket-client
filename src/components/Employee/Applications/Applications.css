@@ -1,0 +1,27 @@
+.single-application {
+  overflow: hidden;
+}
+
+.single-application .card-text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.my-application-info {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .single-application {
+    text-align: center;
+  }
+
+  .my-application-info {
+    margin-bottom: 30px;
+  }
+
+  .my-application-info {
+    width: 100%;
+  }
+
+}

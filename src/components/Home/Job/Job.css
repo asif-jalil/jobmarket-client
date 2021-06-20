@@ -1,0 +1,18 @@
+.jobs {
+  background-color: #f3f3f3;
+}
+
+.jobs .spinner-border {
+  position: absolute;
+  left: calc(50% - 10px);
+  top: 70%;
+}
+
+.search {
+  max-width: 300px;
+}
+
+.pagination {
+  max-width: 350px;
+  margin: 0 auto;
+}

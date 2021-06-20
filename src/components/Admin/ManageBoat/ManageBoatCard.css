@@ -1,0 +1,27 @@
+.dashboard-boat {
+  margin-bottom: 30px;
+}
+
+.dashboard-boat img {
+  width: 100px;
+  height: 110px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.dashboard-boat .card-body {
+  position: relative;
+}
+
+.dashboard-boat .icon-btn,
+.dashboard-boat .spinner-border {
+  position: absolute;
+  right: 1.25rem !important;
+  top: 1.25rem !important;
+  left: unset !important;
+}

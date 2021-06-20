@@ -1,0 +1,28 @@
+.topbar {
+  padding: 9px 30px;
+  background: #000000;
+}
+
+.top-element {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.top-element i {
+  margin-right: 5px;
+}
+
+#top-phone {
+  float: right;
+}
+
+@media(max-width: 767px) {
+  #top-phone {
+    float: none;
+  }
+
+  .top-element {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}

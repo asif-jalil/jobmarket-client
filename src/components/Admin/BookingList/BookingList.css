@@ -1,0 +1,28 @@
+.booking-list .spinner-border {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 15px);
+}
+
+.booking-list thead {
+  background: #dfdfdf;
+}
+
+.booking-list tbody {
+  min-height: 200px;
+}
+
+.booking-list .action {
+  cursor: pointer;
+}
+
+@media(max-width: 576px) {
+  .booking-list {
+    font-size: 14px
+  }
+
+  .booking-list .form-control {
+    font-size: 13px;
+    width: 90px;
+  }
+}

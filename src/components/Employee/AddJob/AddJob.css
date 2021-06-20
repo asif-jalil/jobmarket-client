@@ -1,0 +1,12 @@
+.add-job-form span.error {
+    color: red;
+    font-size: 14px;
+}
+
+.add-job-form label {
+    font-weight: 500;
+}
+
+.add-job-form .form-control {
+    height: 45px;
+}

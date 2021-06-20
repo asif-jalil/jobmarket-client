@@ -1,0 +1,13 @@
+.dashboard-card {
+  cursor: pointer;
+}
+
+.dashboard-card .dashboard-card-number {
+  font-weight: 700;
+  font-size: 50px;
+  margin-right: 15px;
+}
+
+.dashboard-card .dashboard-card-text {
+  text-align: left;
+}
