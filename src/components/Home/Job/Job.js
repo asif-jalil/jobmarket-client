@@ -9,7 +9,6 @@ const Job = () => {
     const jobs = useSelector((state) => state.jobs.loadJobs);
     const dispatch = useDispatch();
     const [visible, setVisible] = useState({ start: 0, end: 20 });
-    const [perPage, setPerPage] = useState(20);
     const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
@@ -34,7 +33,7 @@ const Job = () => {
             setVisible((prev) => {
                 const load = { ...prev };
                 load.start = prev.end;
-                load.end = load.start + perPage;
+                load.end = load.start + 20;
                 return load;
             });
         }
@@ -45,7 +44,7 @@ const Job = () => {
             setVisible((prev) => {
                 const load = { ...prev };
                 load.end = prev.start;
-                load.start = load.end - perPage;
+                load.start = load.end - 20;
                 return load;
             });
         }
