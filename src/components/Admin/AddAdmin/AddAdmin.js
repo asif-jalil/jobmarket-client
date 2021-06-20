@@ -16,7 +16,7 @@ const AddAdmin = () => {
   const onSubmit = (data) => {
     console.log(data);
     setLoader(true);
-    fetch("https://salty-journey-40699.herokuapp.com/add-admin", {
+    fetch("http://localhost:5000/add-admin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ const AddAdmin = () => {
           </Col>
           <Col sm={12}>
             <button type="submit" className="button main-btn main-btn-sm main-btn-transparent">
-              Add Admin
+              Add Admin 
             </button>
             {loader && <Spinner className="ml-4 mt-1 position-absolute" animation="border"></Spinner>}
           </Col>
