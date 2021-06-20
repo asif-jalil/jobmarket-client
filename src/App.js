@@ -14,8 +14,6 @@ import { useState } from "react";
 import firebase from "firebase/app";
 import { useContext } from "react";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import { useDispatch } from "react-redux";
-import { loadJobs } from "./redux/actions/jobAction";
 
 const AuthContext = createContext();
 
@@ -29,7 +27,7 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isEmployee, setIsEmployee] = useState(false);
   const [isSeeker, setIsSeeker] = useState(false);
-  const dispatch = useDispatch()
+ 
 
   useEffect(() => {
     firebase.auth().onAuthStateChanged(function (user) {
@@ -85,10 +83,6 @@ function App() {
         }
       });
   }, [currentUser?.email]);
-
-  useEffect(()=>{
-    dispatch(loadJobs())
-  },[dispatch])
 
   const authContextValue = {
     currentUser,

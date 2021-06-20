@@ -1,31 +1,61 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { Container, Row } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import "./AdminDashboard.css";
 import AdminDashboardCard from "./AdminDashboardCard";
 
 const AdminDashboard = () => {
+  const jobs = useSelector(state => state.jobs.loadJobs);
+  const [applications, setApplications] = useState([])
+  const [employees, setEmployees] = useState([])
+  const [jobSeeker, setJobSeeker] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:5000/applications")
+      .then(res => res.json())
+      .then(data => setApplications(data))
+  }, [])
+
+  useEffect(() => {
+    fetch("http://localhost:5000/employees")
+      .then(res => res.json())
+      .then(data => setEmployees(data))
+  }, [])
+
+  useEffect(() => {
+    fetch("http://localhost:5000/seekers")
+      .then(res => res.json())
+      .then(data => setJobSeeker(data))
+  }, [])
+  
   const dashboardItems = [
     {
-      number: "09",
-      title: "Total Booking",
+      id: 1,
+      number: jobs.length,
+      title: "Total Jobs",
       bg: "#F1536E",
-      link: "/dashboard/booking-list",
+      link: "/dashboard/job-list",
     },
     {
-      number: "04",
-      title: "Total Boat",
+      id:2,
+      number: applications.length,
+      title: "Total Applications",
       bg: "#3DA5F4",
-      link: "/dashboard/boats",
+      link: "/dashboard/application-list",
     },
     {
-      number: "31",
-      title: "Total Review",
+      id: 3,
+      number: employees.length,
+      title: "Total Employees",
       bg: "#00C689",
       link: "/dashboard",
     },
     {
-      number: "11",
-      title: "Total Admin",
+      id: 4,
+      number: jobSeeker.length,
+      title: "Total Job Seeker",
       bg: "#FDA006",
       link: "/dashboard",
     },
@@ -35,8 +65,8 @@ const AdminDashboard = () => {
     <Container fluid>
       <h3 className="dashboard-page-title">Dashboard</h3>
       <Row>
-        {dashboardItems.map((item, idx) => (
-          <AdminDashboardCard key={idx} item={item} />
+        {dashboardItems.map((item) => (
+          <AdminDashboardCard key={item.id} item={item} />
         ))}
       </Row>
     </Container>
