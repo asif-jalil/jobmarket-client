@@ -1,19 +1,20 @@
-# NOUKA BAICH
+# Job Market
 
 ---
 
 [Live Demo](https://noukabaich.netlify.app/) | [API Server](https://salty-journey-40699.herokuapp.com/)
 
-NOUKA BAICH is a **Online Boat Hiring** website. The main purpose of this website is to hire boat easily online. It will be very helpful for all user. It is build with **react**. It is tested on Google Crome, Mozilla Firefox. If it doesn't work please create an issue.
+Job Market is a **Online Job Searching** website. The main purpose of this website is to search easily online. It will be very helpful for all user specially new job candidate. It is build with **react**. It is tested on Google Crome, Mozilla Firefox. If it doesn't work please create an issue.
 
 ## Key Features
 
-- Hiring boats
-- Checkout System
-- Boat Management system
-- Admin and User Separate Dashboard
-- Login Authentication
-- Review System
+- Separate Admin, Employee & Job Seeker Dashboard
+- Employee Must Sign up with a package
+- Employee can create job
+- Create Job will be reviewed by admin
+- Admin Can Approve or Reject a Job
+- Login Authentication with Firebase
+- Job seeker can apply
 - Manage Admin
 
 ## Get started with this repo
@@ -21,7 +22,7 @@ NOUKA BAICH is a **Online Boat Hiring** website. The main purpose of this websit
 If you want to add more feature, simply clone this repo
 
 ```
-git clone https://github.com/asif-jalil/nouka-baich-client.git
-cd full-stack-client-asif-jalil
+git clone https://github.com/asif-jalil/jobmarket-client.git
+cd jobmarket-client
 npm install
 ```

@@ -4,6 +4,7 @@ import "./AdminLayout.css";
 import AdminDashboard from "../AdminDashboard/AdminDashboard";
 import AdminSidebar from "../AdminSidebar/AdminSidebar";
 import JobList from "../JobList/JobList";
+import ApplicationList from "../ApplicationList/ApplicationList";
 import AddAdmin from "../AddAdmin/AddAdmin";
 import { useAuth } from "../../../App";
 import { useEffect } from "react";
@@ -50,7 +51,7 @@ const AdminLayout = () => {
                 <JobList />
               </Route>
               <Route exact path="/dashboard/application-list">
-                <JobList />
+                <ApplicationList />
               </Route>
               <Route path="/dashboard/add-admin">
                 <AddAdmin />

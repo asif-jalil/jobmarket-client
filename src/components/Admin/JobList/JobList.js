@@ -46,7 +46,7 @@ const JobList = () => {
     return (
         <Container fluid>
             <h3 className="dashboard-page-title">All Bookings</h3>
-            <Table borderless hover responsive className="booking-list">
+            <Table borderless hover responsive className="job-list">
                 <thead>
                     <tr>
                         <th>Posted By</th>

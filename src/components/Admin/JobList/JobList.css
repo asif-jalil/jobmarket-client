@@ -1,27 +1,27 @@
-.booking-list .spinner-border {
+.job-list .spinner-border {
   position: absolute;
   top: 50%;
   left: calc(50% - 15px);
 }
 
-.booking-list thead {
+.job-list thead {
   background: #dfdfdf;
 }
 
-.booking-list tbody {
+.job-list tbody {
   min-height: 200px;
 }
 
-.booking-list .action {
+.job-list .action {
   cursor: pointer;
 }
 
 @media(max-width: 576px) {
-  .booking-list {
+  .job-list {
     font-size: 14px
   }
 
-  .booking-list .form-control {
+  .job-list .form-control {
     font-size: 13px;
     width: 90px;
   }

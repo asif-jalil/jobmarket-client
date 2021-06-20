@@ -4,7 +4,7 @@ import rejectedIcon from "../../../images/rejected.svg";
 import pendingIcon from "../../../images/clock.svg";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-const BookingListRow = ({ job, handleStatus, handleShow }) => {
+const JobListRow = ({ job, handleStatus, handleShow }) => {
     const {
         _id,
         status,
@@ -58,4 +58,4 @@ const BookingListRow = ({ job, handleStatus, handleShow }) => {
     );
 };
 
-export default BookingListRow;
+export default JobListRow;
