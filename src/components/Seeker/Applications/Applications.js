@@ -21,7 +21,6 @@ const Applications = () => {
       .then((res) => res.json())
       .then((data) => {
         setMyApplications(data);
-        console.log(data);
       });
   }, [currentUser.email]);
 

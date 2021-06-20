@@ -2,7 +2,7 @@
 
 ---
 
-[Live Demo](https://noukabaich.netlify.app/) | [API Server](https://salty-journey-40699.herokuapp.com/)
+[Live Demo](https://jobmarket1.netlify.app/) | [API Server](https://pure-inlet-61267.herokuapp.com/) | [Server Repo](https://github.com/asif-jalil/jobmarket-server)
 
 Job Market is a **Online Job Searching** website. The main purpose of this website is to search easily online. It will be very helpful for all user specially new job candidate. It is build with **react**. It is tested on Google Crome, Mozilla Firefox. If it doesn't work please create an issue.
 
