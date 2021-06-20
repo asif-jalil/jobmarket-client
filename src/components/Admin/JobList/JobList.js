@@ -19,7 +19,7 @@ const JobList = () => {
     };
 
     const handleStatus = (status, id) => {
-        fetch(`http://localhost:5000/statusUpdate/${id}?status=${status}`, {
+        fetch(`https://pure-inlet-61267.herokuapp.com/statusUpdate/${id}?status=${status}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const JobList = () => {
 
     useEffect(() => {
         setLoader(true);
-        fetch("http://localhost:5000/jobs")
+        fetch("https://pure-inlet-61267.herokuapp.com/jobs")
             .then((res) => res.json())
             .then((data) => {
                 setJobs(data);

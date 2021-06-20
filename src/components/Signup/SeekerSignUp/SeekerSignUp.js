@@ -33,7 +33,7 @@ const SeekerSignUp = () => {
       .then((userCredential) => {
         // Signed in
         // var user = userCredential.user;
-        fetch("http://localhost:5000/signup-seeker", {
+        fetch("https://pure-inlet-61267.herokuapp.com/signup-seeker", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

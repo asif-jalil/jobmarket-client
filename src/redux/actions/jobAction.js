@@ -1,6 +1,6 @@
 export function loadJobs() {
     return (dispatch) => {
-        fetch("http://localhost:5000/approvedJobs")
+        fetch("https://pure-inlet-61267.herokuapp.com/approvedJobs")
             .then(res => res.json())
             .then(data => dispatch({
                 type: "LOAD_JOBS",

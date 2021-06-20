@@ -13,19 +13,19 @@ const AdminDashboard = () => {
   const [jobSeeker, setJobSeeker] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:5000/applications")
+    fetch("https://pure-inlet-61267.herokuapp.com/applications")
       .then(res => res.json())
       .then(data => setApplications(data))
   }, [])
 
   useEffect(() => {
-    fetch("http://localhost:5000/employees")
+    fetch("https://pure-inlet-61267.herokuapp.com/employees")
       .then(res => res.json())
       .then(data => setEmployees(data))
   }, [])
 
   useEffect(() => {
-    fetch("http://localhost:5000/seekers")
+    fetch("https://pure-inlet-61267.herokuapp.com/seekers")
       .then(res => res.json())
       .then(data => setJobSeeker(data))
   }, [])

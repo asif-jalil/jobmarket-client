@@ -53,7 +53,7 @@ const PaymentForm = ({ setActive }) => {
         cardInfo: cardInfo,
       };
 
-      fetch("http://localhost:5000/signup-employee", {
+      fetch("https://pure-inlet-61267.herokuapp.com/signup-employee", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const PaymentForm = ({ setActive }) => {
         .then((data) => {
           if (data) {
             if (data) {
-              fetch("http://localhost:5000/employee-package", {
+              fetch("https://pure-inlet-61267.herokuapp.com/employee-package", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

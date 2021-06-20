@@ -37,7 +37,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/check-admin", {
+    fetch("https://pure-inlet-61267.herokuapp.com/check-admin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function App() {
   }, [currentUser?.email]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/check-employee", {
+    fetch("https://pure-inlet-61267.herokuapp.com/check-employee", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function App() {
   }, [currentUser?.email]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/check-seeker", {
+    fetch("https://pure-inlet-61267.herokuapp.com/check-seeker", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

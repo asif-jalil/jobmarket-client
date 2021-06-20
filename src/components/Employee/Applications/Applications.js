@@ -11,7 +11,7 @@ const Applications = () => {
   const [myApplications, setMyApplications] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/application-by-employee", {
+    fetch("https://pure-inlet-61267.herokuapp.com/application-by-employee", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

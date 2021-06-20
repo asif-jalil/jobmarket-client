@@ -11,7 +11,7 @@ const JobList = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/jobsByEmail/${currentUser.email}`)
+        fetch(`https://pure-inlet-61267.herokuapp.com/jobsByEmail/${currentUser.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setJobs(data);

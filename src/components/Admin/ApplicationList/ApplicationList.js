@@ -11,7 +11,7 @@ const ApplicationList = () => {
   const [applications, setApplications] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/applications")
+    fetch("https://pure-inlet-61267.herokuapp.com/applications")
       .then((res) => res.json())
       .then((data) => {
         setApplications(data);

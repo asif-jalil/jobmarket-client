@@ -29,7 +29,7 @@ const AddJob = () => {
             status: 'pending'
         }
 
-        fetch("http://localhost:5000/add-job", {
+        fetch("https://pure-inlet-61267.herokuapp.com/add-job", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

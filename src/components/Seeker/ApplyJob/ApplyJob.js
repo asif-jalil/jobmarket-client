@@ -23,7 +23,7 @@ const ApplyJob = () => {
     } = useForm();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/jobById/${jobId}`)
+        fetch(`https://pure-inlet-61267.herokuapp.com/jobById/${jobId}`)
             .then((res) => res.json())
             .then((data) => {
                 setJobInfo(data[0]);
@@ -41,7 +41,7 @@ const ApplyJob = () => {
         }
         
 
-        fetch("http://localhost:5000/new-application", {
+        fetch("https://pure-inlet-61267.herokuapp.com/new-application", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
