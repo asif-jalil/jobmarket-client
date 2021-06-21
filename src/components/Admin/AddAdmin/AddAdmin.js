@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 
 const AddAdmin = () => {
   const [success, setSuccess] = useState("");
+  const [error, setError] = useState("")
   const [loader, setLoader] = useState(false);
   const {
     register,
@@ -14,7 +15,6 @@ const AddAdmin = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     setLoader(true);
     fetch("https://pure-inlet-61267.herokuapp.com/add-admin", {
       method: "POST",
@@ -29,7 +29,16 @@ const AddAdmin = () => {
           setSuccess("An Admin Added Successfully");
           setLoader(false);
           reset();
+        } else {
+          setError("This email is already in use by another account")
+          setLoader(false);
+          reset();
         }
+        setTimeout(() => {
+          setSuccess("")
+          setError("")
+        }, 1500)
+
       });
   };
 
@@ -37,6 +46,7 @@ const AddAdmin = () => {
     <Container fluid>
       <h3 className="dashboard-page-title">Add An Admin</h3>
       {success && <Alert variant="success">{success}</Alert>}
+      {error && <Alert variant="danger">{error}</Alert>}
       <form onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Col md={6}>
