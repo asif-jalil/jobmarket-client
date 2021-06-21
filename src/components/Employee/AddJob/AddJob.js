@@ -8,6 +8,7 @@ import "./AddJob.css";
 const AddJob = () => {
     const [disableBtn, setDisableBtn] = useState(false);
     const [success, setSuccess] = useState("");
+    const [error, setError] = useState("");
     const [loader, setLoader] = useState(false);
     const { currentUser } = useAuth();
 
@@ -26,22 +27,26 @@ const AddJob = () => {
         const formData = {
             ...data,
             email: currentUser.email,
-            status: 'pending'
-        }
+            status: "pending",
+        };
 
         fetch("https://pure-inlet-61267.herokuapp.com/add-job", {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(formData),
         })
             .then((res) => res.json())
             .then((data) => {
-                reset();
-                setDisableBtn(false);
-                setLoader(false);
-                setSuccess("You have successfully added job");
+                if (data) {
+                    reset();
+                    setDisableBtn(false);
+                    setLoader(false);
+                    setSuccess("You have successfully added job");
+                } else {
+                    setError("Your package may expire or package limit reached")
+                }
             });
     };
 
@@ -144,7 +149,10 @@ const AddJob = () => {
 
                         <Col md={6}>
                             <div className="mb-3">
-                                <label htmlFor="">Required Knowledge <small>(Separated By Comma)</small></label>
+                                <label htmlFor="">
+                                    Required Knowledge{" "}
+                                    <small>(Separated By Comma)</small>
+                                </label>
                                 <input
                                     type="text"
                                     className="form-control"
