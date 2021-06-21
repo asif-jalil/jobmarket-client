@@ -15,21 +15,21 @@ const packageData = [
     title: "basic",
     price: 10,
     expDate: 30,
-    feature: ["Receive Unlimited Application", "10 Hour Job Post"],
+    feature: ["30 Days Validity, Receive Unlimited Application", "10 Job Post Per Hour"],
   },
   {
     id: 2,
     title: "standard",
     price: 20,
     expDate: 30,
-    feature: ["Receive Unlimited Application", "20 Hour Job Post"],
+    feature: ["30 Days Validity, Receive Unlimited Application", "20 Job Post Per Hour"],
   },
   {
     id: 3,
     title: "premium",
     price: 30,
     expDate: 30,
-    feature: ["Receive Unlimited Application", "30 Hour Job Post"],
+    feature: ["30 Days Validity, Receive Unlimited Application", "30 Job Post Per Hour"],
   },
 ];
 
