@@ -4,7 +4,7 @@ export function loadJobs() {
             .then(res => res.json())
             .then(data => dispatch({
                 type: "LOAD_JOBS",
-                payload: data
+                payload: data.reverse()
             }))
     }
 }

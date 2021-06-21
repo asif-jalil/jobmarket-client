@@ -14,7 +14,8 @@ const ApplicationList = () => {
     fetch("https://pure-inlet-61267.herokuapp.com/applications")
       .then((res) => res.json())
       .then((data) => {
-        setApplications(data);
+        const reversedData = data.reverse();
+        setApplications(reversedData);
         console.log(data);
       });
   }, [currentUser.email]);

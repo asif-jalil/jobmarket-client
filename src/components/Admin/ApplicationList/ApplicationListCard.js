@@ -17,6 +17,9 @@ const ApplicationListCard = ({ application }) => {
                                     Name: {applicationInfo.name}
                                 </Card.Text>
                                 <Card.Text className="mb-0">
+                                    Email: {applicationInfo.email}
+                                </Card.Text>
+                                <Card.Text className="mb-0">
                                     Github:{" "}
                                     <a
                                         href={applicationInfo.github}
@@ -75,7 +78,7 @@ const ApplicationListCard = ({ application }) => {
                             </Card.Text>
                             <Card.Text className="mb-0">
                                 <i className="fas fa-sack-dollar"></i>{" "}
-                                {jobInfo.lowestSalary} - {jobInfo.highestSalary}
+                                ${jobInfo.lowestSalary} - ${jobInfo.highestSalary}
                             </Card.Text>
                         </div>
                     </div>

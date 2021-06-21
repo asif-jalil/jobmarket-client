@@ -38,7 +38,8 @@ const JobList = () => {
         fetch("https://pure-inlet-61267.herokuapp.com/jobs")
             .then((res) => res.json())
             .then((data) => {
-                setJobs(data);
+                const reversedData = data.reverse()
+                setJobs(reversedData);
                 setLoader(false);
             });
     }, [statusUpdate]);
@@ -100,8 +101,8 @@ const JobList = () => {
                         <b>Knowledge:</b> {modalData.knowledge}
                     </p>
                     <p>
-                        <b>Salary Range:</b> {modalData.lowestSalary} -{" "}
-                        {modalData.highestSalary}
+                        <b>Salary Range:</b> ${modalData.lowestSalary} -{" "}
+                        ${modalData.highestSalary}
                     </p>
                     <p>
                         <b>Status:</b> {modalData.status}

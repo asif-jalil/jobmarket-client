@@ -35,6 +35,9 @@ const ApplicationCard = ({ application }) => {
                                     Name: {applicationInfo.name}
                                 </Card.Text>
                                 <Card.Text className="mb-0">
+                                    Email: {applicationInfo.email}
+                                </Card.Text>
+                                <Card.Text className="mb-0">
                                     Github: <a href={applicationInfo.github} className="text-danger" target="_black">{ applicationInfo.github }</a>
                                 </Card.Text>
                                 <Card.Text className="mb-0">

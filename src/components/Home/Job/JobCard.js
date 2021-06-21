@@ -29,8 +29,8 @@ const JobCard = ({ job }) => {
                         <i className="fas fa-book-reader"></i> Required Knowledge: {knowledge}
                     </Card.Text>
                     <Card.Text className="mb-4">
-                        <i className="fas fa-sack-dollar"></i> Salary Range: {lowestSalary} -{" "}
-                        {highestSalary}
+                        <i className="fas fa-sack-dollar"></i> Salary Range: ${lowestSalary} -{" "}
+                        ${highestSalary}
                     </Card.Text>
                     <Link to={`/dashboard/apply/${job._id}`} className="btn btn-danger btn-sm">Apply Now</Link>
                 </Card.Body>

@@ -218,6 +218,11 @@ ul {
   right: 0;
 }
 
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #e7434e
+}
+
 @media (max-width: 767px) {
   .section-title h3 {
     font-size: 30px;
