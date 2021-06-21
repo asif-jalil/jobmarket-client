@@ -52,7 +52,7 @@ const PaymentForm = ({ setActive }) => {
                 card: paymentMethod.card,
             };
             const packageDetails = {
-                package: packageInfo,
+                package: {...packageInfo, email: userInfo.email},
                 cardInfo: cardInfo,
             };
 

@@ -10,6 +10,7 @@ const PackageCard = ({ pack, setActive }) => {
     const info = {
       packageId: pack.id,
       price: pack.price,
+      expDate: new Date().getTime() + (pack.expDate*24*60*60*1000)
     };
     dispatch(getPackage(info));
     setActive("signup");

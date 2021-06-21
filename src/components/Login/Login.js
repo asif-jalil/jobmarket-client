@@ -127,14 +127,6 @@ const Login = () => {
                                             As a Job Seeker
                                         </Link>
                                     </div>
-                                    <div className="w-100 text-center mt-3">
-                                        <Link
-                                            to="/"
-                                            className="btn btn-link theme-text"
-                                        >
-                                            Go to Home
-                                        </Link>
-                                    </div>
                                 </Card.Body>
                             </Card>
                         </Col>
