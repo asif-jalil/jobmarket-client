@@ -16,7 +16,7 @@ const AddAdmin = () => {
 
   const onSubmit = (data) => {
     setLoader(true);
-    fetch("http://localhost:5000/add-admin", {
+    fetch("https://pure-inlet-61267.herokuapp.com/add-admin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
