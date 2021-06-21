@@ -55,6 +55,7 @@ const AddJob = () => {
             <h3 className="dashboard-page-title">Add A Job</h3>
             <div className="position-relative add-boat">
                 {success && <Alert variant="success">{success}</Alert>}
+                {error && <Alert variant="success">{error}</Alert>}
                 <form
                     className="add-job-form"
                     onSubmit={handleSubmit(onSubmit)}
