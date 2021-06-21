@@ -64,6 +64,8 @@ const Login = () => {
                             <Card className="shadow-lg border-0">
                                 <Card.Body>
                                     <h2 className="text-center mb-4">Log In</h2>
+                                    <p className="mb-0">Admin Email: admin@admin.com</p>
+                                    <p>Admin Password: adminadmin</p>
                                     <div className="w-100 mt-4 mb-4">
                                         <form onSubmit={handleSubmit(onSubmit)}>
                                             <div className="mb-3">
