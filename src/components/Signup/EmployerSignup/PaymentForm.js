@@ -69,36 +69,32 @@ const PaymentForm = ({ setActive }) => {
                 .then((res) => res.json())
                 .then((data) => {
                     if (data) {
-                        console.log("got signup");
-                        if (data) {
-                            console.log("got signup true");
-                            fetch(
-                                "https://pure-inlet-61267.herokuapp.com/employee-package",
-                                {
-                                    method: "POST",
-                                    headers: {
-                                        "Content-Type": "application/json",
-                                    },
-                                    body: JSON.stringify(packageDetails),
+                        fetch("https://pure-inlet-61267.herokuapp.com/employee-package", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify(packageDetails),
+                            }
+                        )
+                            .then((res2) => res2.json())
+                            .then((data) => {
+                                if (data) {
+                                    console.log("got package true");
+
+                                    userLogin(
+                                        userInfo.name,
+                                        userInfo.email,
+                                        userInfo.password
+                                    );
+                                    setDisabledBtn(false);
+                                    setLoader(false);
                                 }
-                            )
-                                .then((res2) => res2.json())
-                                .then((data) => {
-                                    console.log("got package");
-
-                                    if (data) {
-                                        console.log("got package true");
-
-                                        userLogin(
-                                            userInfo.name,
-                                            userInfo.email,
-                                            userInfo.password
-                                        );
-                                        setDisabledBtn(false);
-                                        setLoader(false);
-                                    }
-                                });
-                        }
+                            });
+                    } else {
+                        setDisabledBtn(false)
+                        setLoader(false)
+                        setError("This email you provide is already in use with another account")
                     }
                 });
         }

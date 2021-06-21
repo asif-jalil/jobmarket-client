@@ -44,6 +44,8 @@ const SeekerSignUp = () => {
           .then((result) => {
             if (result) {
               updateUserProfile(data.name);
+            } else {
+              setError("The email you provide is already in use with another account")
             }
           });
       })
