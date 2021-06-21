@@ -1,8 +1,11 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../../App";
 
 const JobCard = ({ job }) => {
+    const { isSeeker } = useAuth();
+
     const {
         company,
         title,
@@ -20,19 +23,33 @@ const JobCard = ({ job }) => {
                     <Card.Title className="mb-3">{title}</Card.Title>
                     <Card.Subtitle className="mb-1">At {company}</Card.Subtitle>
                     <Card.Text className="mb-0">
-                        <i className="fas fa-graduation-cap"></i> Education: {education}
+                        <i className="fas fa-graduation-cap"></i> Education:{" "}
+                        {education}
                     </Card.Text>
                     <Card.Text className="mb-0">
-                        <i className="fas fa-user-cog"></i> Experience: {experience}
+                        <i className="fas fa-user-cog"></i> Experience:{" "}
+                        {experience}
                     </Card.Text>
                     <Card.Text className="mb-0">
-                        <i className="fas fa-book-reader"></i> Required Knowledge: {knowledge}
+                        <i className="fas fa-book-reader"></i> Required
+                        Knowledge: {knowledge}
                     </Card.Text>
                     <Card.Text className="mb-4">
-                        <i className="fas fa-sack-dollar"></i> Salary Range: ${lowestSalary} -{" "}
-                        ${highestSalary}
+                        <i className="fas fa-sack-dollar"></i> Salary Range: $
+                        {lowestSalary} - ${highestSalary}
                     </Card.Text>
-                    <Link to={`/dashboard/apply/${job._id}`} className="btn btn-danger btn-sm">Apply Now</Link>
+                    {isSeeker ? (
+                        <Link
+                            to={`/dashboard/apply/${job._id}`}
+                            className="btn btn-danger btn-sm"
+                        >
+                            Apply Now
+                        </Link>
+                    ) : (
+                        <p className="text-danger">
+                            Only Job Seekers can apply
+                        </p>
+                    )}
                 </Card.Body>
             </Card>
         </Col>

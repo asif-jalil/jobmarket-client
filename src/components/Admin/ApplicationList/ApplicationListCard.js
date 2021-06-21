@@ -62,7 +62,7 @@ const ApplicationListCard = ({ application }) => {
                             </div>
                             <hr />
                             <Card.Subtitle className="mb-3">
-                                Your Job post for {jobInfo.title} at {jobInfo.company}
+                                Job post for {jobInfo.title} at {jobInfo.company}
                             </Card.Subtitle>
                             <Card.Text className="mb-0">
                                 <i className="fas fa-graduation-cap"></i>{" "}

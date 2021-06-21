@@ -10,6 +10,7 @@ const Job = () => {
     const dispatch = useDispatch();
     const [visible, setVisible] = useState({ start: 0, end: 20 });
     const [searchTerm, setSearchTerm] = useState("");
+    const perPage = 20;
 
     useEffect(() => {
         dispatch(loadJobs());
@@ -21,9 +22,8 @@ const Job = () => {
             if (searchTerm === "") {
                 return u;
             } else if (
-                u.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                u.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                u.website.toLowerCase().includes(searchTerm.toLowerCase())
+                u.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                u.knowledge.toLowerCase().includes(searchTerm.toLowerCase())
             ) {
                 return u;
             }
@@ -33,7 +33,7 @@ const Job = () => {
             setVisible((prev) => {
                 const load = { ...prev };
                 load.start = prev.end;
-                load.end = load.start + 20;
+                load.end = load.start + perPage;
                 return load;
             });
         }
@@ -44,7 +44,7 @@ const Job = () => {
             setVisible((prev) => {
                 const load = { ...prev };
                 load.end = prev.start;
-                load.start = load.end - 20;
+                load.start = load.end - perPage;
                 return load;
             });
         }
