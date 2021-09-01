@@ -1,0 +1,10 @@
+.hero {
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url(../../../images/herobg.jpg);
+  background-size: cover;
+}

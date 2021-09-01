@@ -5,7 +5,6 @@ import AdminDashboard from "../AdminDashboard/AdminDashboard";
 import AdminSidebar from "../AdminSidebar/AdminSidebar";
 import JobList from "../JobList/JobList";
 import ApplicationList from "../ApplicationList/ApplicationList";
-import AddAdmin from "../AddAdmin/AddAdmin";
 import { useAuth } from "../../../App";
 import { useEffect } from "react";
 import { useState } from "react";
@@ -52,9 +51,6 @@ const AdminLayout = () => {
               </Route>
               <Route exact path="/dashboard/application-list">
                 <ApplicationList />
-              </Route>
-              <Route path="/dashboard/add-admin">
-                <AddAdmin />
               </Route>
             </Switch>
           </section>

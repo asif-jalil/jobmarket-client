@@ -41,9 +41,6 @@ const AdminSidebar = () => {
         <NavLink to="/dashboard/application-list" className="nav-link">
           <i className="fas fa-list-ul"></i> All application
         </NavLink>
-        <NavLink to="/dashboard/add-admin" className="nav-link">
-          <i className="fas fa-user-lock"></i> Make Admin
-        </NavLink>
         <NavLink exact to="/" className="nav-link">
           <i className="far fa-home"></i> Home
         </NavLink>
